@@ -1,0 +1,15 @@
+{
+  "name": "fakeoff-banking",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewgenius/fakeoff-banking.git"
+  },
+  "author": "Evgeniy <ewgeniux@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewgenius/fakeoff-banking/issues"
+  },
+  "homepage": "https://github.com/ewgenius/fakeoff-banking#readme"
+}
