@@ -14,5 +14,9 @@
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "sourceMap": true
-  }
+  },
+  "include": [
+    "src/**/*",
+    "node_modules/@types/**/*"
+  ]
 }
