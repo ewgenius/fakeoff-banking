@@ -20,6 +20,9 @@ module.exports = (env, port) => {
     ])
   } else {
     plugins = plugins.concat([
+      new webpack.ProvidePlugin({
+        'Promise': 'es6-promise'
+      }),
       new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js', Infinity),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.UglifyJsPlugin({
