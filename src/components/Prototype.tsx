@@ -1,12 +1,13 @@
 import * as React from 'react'
 import { Component, Props } from 'react'
-import { MuiThemeProvider, getMuiTheme, colors, darkBaseTheme } from 'material-ui/styles'
+import { MuiThemeProvider, getMuiTheme, colors } from 'material-ui/styles'
 import { fade } from 'material-ui/utils/colorManipulator'
 
 import { Flex } from 'reflexbox'
 import AppBar from 'material-ui/AppBar'
-
-console.log(darkBaseTheme)
+import FontIcon from 'material-ui/FontIcon'
+import RaisedButton from 'material-ui/RaisedButton'
+import FloatingActionButton from 'material-ui/FloatingActionButton'
 
 const theme = getMuiTheme({
   palette: {
@@ -18,8 +19,8 @@ const theme = getMuiTheme({
     accent3Color: colors.amberA100,
     textColor: colors.fullWhite,
     alternateTextColor: '#fff',
-    canvasColor: '#303030',
-    borderColor: fade(colors.fullWhite, 0.3),
+    //canvasColor: '#303030',
+    //borderColor: fade(colors.fullWhite, 0.3),
     disabledColor: fade(colors.fullWhite, 0.3),
     pickerHeaderColor: fade(colors.fullWhite, 0.12),
     clockCircleColor: fade(colors.fullWhite, 0.12),
@@ -32,9 +33,18 @@ export default class Prototype extends Component<Props<any>, {}> {
     return <MuiThemeProvider muiTheme={theme}>
       <Flex flexAuto flexColumn>
         <AppBar title='Фэйк-банк' />
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
+        <Flex style={{ padding: 16 }} align='stretch'>
+          <RaisedButton primary label='test' />
+          <RaisedButton secondary label='test' />
+        </Flex>
+        <Flex style={{ padding: 16 }} align='stretch'>
+          <FloatingActionButton>
+            <FontIcon className='material-icons'>add</FontIcon>
+          </FloatingActionButton>
+          <FloatingActionButton secondary>
+            <FontIcon className='material-icons'>add</FontIcon>
+          </FloatingActionButton>
+        </Flex>
       </Flex>
     </MuiThemeProvider>
   }

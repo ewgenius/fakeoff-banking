@@ -1,3 +1,6 @@
+/// <reference path="../typings/modules/reflexbox/index.d.ts" />
+
+
 import './styles/styles.scss'
 import * as React from 'react'
 import { render } from 'react-dom'
