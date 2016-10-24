@@ -51,7 +51,10 @@ module.exports = (env, port) => {
         'redux',
         'react-redux',
         'react-router',
-        'immutable'
+        'immutable',
+        'material-ui',
+        'react-tap-event-plugin',
+        'firebase'
       ]
     },
     output: {
