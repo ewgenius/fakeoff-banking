@@ -10,7 +10,25 @@ declare module "reflexbox" {
 }
 
 declare namespace Reflexbox {
-  interface ReflexProps extends React.Props<any> {
+  interface RoboxProps {
+    gutter?: number
+    m?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    mx?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    my?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    mt?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    mb?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    ml?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    mr?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    p?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    px?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    py?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    pt?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    pb?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    pl?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+    pr?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+  }
+
+  interface ReflexProps extends RoboxProps, React.Props<any> {
     flex?: boolean
     wrap?: boolean
     flexColumn?: boolean
@@ -31,9 +49,19 @@ declare namespace Reflexbox {
 
   function withReflex(params: {
     listen: boolean
-  }): React.Component<ReflexProps, {}>
+  }): React.Component<ReflexProps, {}>;
 
-  export class Flex extends React.Component<ReflexProps, {}> { }
+  export interface FlexProps extends ReflexProps { }
+
+  export class Flex extends React.Component<FlexProps, {}> { }
+
+  export interface BoxProps extends ReflexProps { }
+
+  export class Box extends React.Component<BoxProps, {}> { }
+
+  export interface GridProps extends ReflexProps { }
+
+  export class Grid extends React.Component<GridProps, {}> { }
 }
 
 declare module "reflexbox/Flex" {

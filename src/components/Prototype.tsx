@@ -33,11 +33,11 @@ export default class Prototype extends Component<Props<any>, {}> {
     return <MuiThemeProvider muiTheme={theme}>
       <Flex flexAuto flexColumn>
         <AppBar title='Фэйк-банк' />
-        <Flex style={{ padding: 16 }} align='stretch'>
+        <Flex px={6} align='stretch'>
           <RaisedButton primary label='test' />
           <RaisedButton secondary label='test' />
         </Flex>
-        <Flex style={{ padding: 16 }} align='stretch'>
+        <Flex align='stretch'>
           <FloatingActionButton>
             <FontIcon className='material-icons'>add</FontIcon>
           </FloatingActionButton>
