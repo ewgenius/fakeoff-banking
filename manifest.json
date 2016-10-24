@@ -1,0 +1,15 @@
+{
+  "name": "Fakeoff",
+  "short_name": "Fakeoff",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

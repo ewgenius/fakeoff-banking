@@ -11,5 +11,35 @@
   "bugs": {
     "url": "https://github.com/ewgenius/fakeoff-banking/issues"
   },
-  "homepage": "https://github.com/ewgenius/fakeoff-banking#readme"
+  "homepage": "https://github.com/ewgenius/fakeoff-banking#readme",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/immutable": "^3.8.4",
+    "@types/react": "^0.14.41",
+    "@types/react-dom": "^0.14.18",
+    "@types/react-redux": "^4.4.32",
+    "@types/react-router": "^2.0.38",
+    "@types/redux": "^3.6.31",
+    "css-loader": "^0.25.0",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.9.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "imports-loader": "^0.6.5",
+    "node-sass": "^3.10.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.3",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
