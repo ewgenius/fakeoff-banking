@@ -5,19 +5,21 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const webpackConfigurer = require('./config/webpack.config')
 
-const webpackConfigDev = webpackConfigurer('development')
+const PORT = 8081
+
+const webpackConfigDev = webpackConfigurer('development', PORT)
 const webpackConfigProd = webpackConfigurer('production')
 
 gulp.task('copy', () => {
   return gulp.src([
-    `./index.html`,
-    `./manifest.json`
-  ])
+      `./index.html`,
+      `./manifest.json`
+    ])
     .pipe(gulp.dest('./build'))
 })
 
 gulp.task('assets', () => {
-  return gulp.src(['./assets/**/*.png', './assets/**/*.ico',])
+  return gulp.src(['./assets/**/*.png', './assets/**/*.ico', ])
     .pipe(gulp.dest(`./build/assets`))
 })
 
@@ -40,9 +42,9 @@ gulp.task('serve', () => {
     }
   })
 
-  server.listen(8081, 'localhost', err => {
+  server.listen(PORT, 'localhost', err => {
     if (err) throw new util.PluginError('webpack-dev-server', err)
-    util.log('[webpack-dev-server]', 'http://localhost:8081')
+    util.log('[webpack-dev-server]', `http://localhost:${PORT}`)
   })
 })
 

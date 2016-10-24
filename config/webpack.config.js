@@ -1,8 +1,9 @@
 const path = require('path')
 const webpack = require('webpack')
 
-module.exports = (env) => {
+module.exports = (env, port) => {
   const isDev = env === 'development'
+  const PORT = port || 8081
 
   let plugins = [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.bundle.js', Infinity)
@@ -37,7 +38,7 @@ module.exports = (env) => {
   return {
     entry: {
       app: (isDev ? [
-        'webpack-dev-server/client?http://localhost:8080/',
+        `webpack-dev-server/client?http://localhost:${PORT}/`,
         'webpack/hot/dev-server',
         path.join(__dirname, '../src/app.tsx')
       ] : [path.join(__dirname, '../src/app.tsx')]),
