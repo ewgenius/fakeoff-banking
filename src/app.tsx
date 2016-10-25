@@ -22,16 +22,17 @@ const store = createStore(() => { })
 
 function updateReady(worker) {
   console.log('update is ready')
-  if (confirm('new version of app is available. update?')) {
+  //if (confirm('new version of app is available. update?')) {
     worker.postMessage({ action: 'skipWaiting' })
-  }
+  //}
   /*store.dispatch(showAlert('New version is ready', 'reload', () => {
   }))*/
 }
 
 function trackInstalling(worker) {
   console.log('installing')
-  worker.addEventListener('statechange', () => {
+  worker.addEventListener('statechange', (s: any) => {
+    console.log(s)
     updateReady(worker)
   })
 }

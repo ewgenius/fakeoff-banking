@@ -1,4 +1,4 @@
-const staticCacheName = 'state-v1' 
+const staticCacheName = 'state-v3' 
 
 self.addEventListener('install', event => {
   console.log('installed')
