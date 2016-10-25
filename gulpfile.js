@@ -18,6 +18,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('./build'))
 })
 
+gulp.task('sw', () => {
+  return gulp.src('./src/sw.js')
+    .pipe(gulp.dest(`./build`))
+})
+
 gulp.task('assets', () => {
   return gulp.src(['./assets/**/*.png', './assets/**/*.ico', ])
     .pipe(gulp.dest(`./build/assets`))
@@ -48,6 +53,6 @@ gulp.task('serve', () => {
   })
 })
 
-gulp.task('default', ['assets', 'copy', 'assets', 'serve'])
+gulp.task('default', ['assets', 'sw', 'copy', 'assets', 'serve'])
 
-gulp.task('bundle', ['assets', 'copy', 'assets', 'webpack'])
+gulp.task('bundle', ['assets', 'sw', 'copy', 'assets', 'webpack'])
