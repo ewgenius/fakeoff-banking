@@ -13,10 +13,13 @@
   },
   "homepage": "https://github.com/ewgenius/fakeoff-banking#readme",
   "dependencies": {
+    "apollo-client": "^0.5.0",
     "firebase": "^3.5.1",
+    "graphql-tag": "^0.1.15",
     "immutable": "^3.8.1",
     "material-ui": "^0.16.1",
     "react": "^15.3.2",
+    "react-apollo": "^0.5.15",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",

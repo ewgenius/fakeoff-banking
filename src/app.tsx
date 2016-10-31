@@ -23,7 +23,7 @@ const store = createStore(() => { })
 function updateReady(worker) {
   console.log('update is ready')
   //if (confirm('new version of app is available. update?')) {
-    worker.postMessage({ action: 'skipWaiting' })
+  worker.postMessage({ action: 'skipWaiting' })
   //}
   /*store.dispatch(showAlert('New version is ready', 'reload', () => {
   }))*/
